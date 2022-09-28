@@ -31,6 +31,32 @@ nav>ul>li{
     margin-right:auto;
 }
 
+.content{
+    background-color: #1a1717;
+    display: flex;
+    height: 80vh;
+}
+
+.left{
+    width: 55%;
+    justify-content: end;
+    align-items: center;
+    padding: 60px 75px 50px 90px;
+    color: #edeff3;
+}
+.left>.head-1{
+    font-size: 3em;
+    font-weight: 800;
+    color: #9fb6e3;
+}
+.left>.head-2{
+    font-size: 4em;
+    font-weight: 800;
+}
+.right{
+    width: 45%;
+}
+
 
 @media (max-width: 700px) {
     .navbar{flex-direction: column;
@@ -40,6 +66,15 @@ nav>ul>li{
     }
     .logo{
         margin: 10px auto;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
     }
     
 }
