@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family:  'Abril Fatface', sans-serif;
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 body{
@@ -24,16 +25,26 @@ body{
 nav>ul{
     list-style-type: none;
 }
-nav>ul>li{
+a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+li{
     display: inline-block;
     text-align: center;
     font-size: 18px;
     padding: 10px;
     margin: 10px;
+    border-bottom: 1px solid transparent ;
     cursor: pointer;
+    transition: .5s;
+}
+li:hover{
+    border-bottom: 1px solid white ;
 }
 .logo{
-    font-size: 27px;
+    font-size: 2.5em;
     font-weight: 600;
     margin-right:auto;
 }
@@ -57,15 +68,24 @@ nav>ul>li{
     color: #9fb6e3;
 }
 .head-2{
+    background-color: transparent;
     font-size: 3.5em;
     font-weight: 800;
 }
+span{
+    transition: .4s;
+}
+span:hover{
+    color: #873edf;
+}
 .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 45%;
 }
 .right>img{
     max-width: 20vw;
-    margin: 22% 15%;
     border-radius: 15px;
 }
 
@@ -75,7 +95,6 @@ nav>ul>li{
     color: white;
     height: 100vh;
 }
-
 #skills{
     background-image: url("img/bg1.jpg");
     background-size: 100%;
@@ -83,15 +102,16 @@ nav>ul>li{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    height:auto;
+    padding:5vh 0 15vh;
 }
 .cntr{
     background-color: transparent;
     margin: 30px auto;
-    width: 60%;
+    width: 57vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .item{
     background-color: tomato;
@@ -104,12 +124,27 @@ nav>ul>li{
 
 #project{
     background-color: #0c0a0a;
+    height: auto;
 }
-
-
-@media (max-width: 650px) {
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    width: 70vw;
+}
+.card{
+    background-color: limegreen;
+    height: 210px;
+    width: 300px;
+    margin: 20px;
+}
+@media (max-width: 800px) {
     .navbar{flex-direction: column;
     justify-content: center;}
+    a{
+        display:block;
+    }
     nav>ul>li{
         display: block;
     }
@@ -129,10 +164,6 @@ nav>ul>li{
     .right{
         width: 100%;
     }
-    .right>img{
-        max-width: 10em;
-        margin: 10px 36%;
-    }
     .left>.head-1{
         font-size: 2em;
     }
@@ -140,10 +171,7 @@ nav>ul>li{
         font-size: 2em;
     }
     .cntr{
-        width:90%;
-    }
-    #skills{
-        height: auto;
+        width:70vw;
     }
     
 }
