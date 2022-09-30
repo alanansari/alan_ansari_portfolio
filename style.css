@@ -12,12 +12,14 @@ body{
 }
 
 .topbtn{
+    display: none;
     position: fixed;
     text-align: center;
     font-size: 4vw;
     width: 4vw;
     height: 4vw;
-    background-color: #873edf;
+    background-color: #6109cc;
+    opacity: 60%;
     border-radius: 30%;
     bottom: 3vw;
     right: 5vw;
@@ -163,6 +165,7 @@ span:hover{
 /*Projects section*/
 
 #project{
+    padding-top: 1vh;
     background-color: #0c0a0a;
     height: auto;
     margin: 0px;
@@ -206,6 +209,7 @@ span:hover{
 /* Contact Me section */
 
 #contact{
+    padding-top: 3vh;
     text-align: center;
     color: white;
     background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
@@ -296,6 +300,7 @@ span:hover{
         margin: 25px;
     }
     .topbtn{
+        display: block;
         width: 7vw;
         height: 7vw;
         font-size: 8vw;
