@@ -11,12 +11,27 @@ body{
     overflow-x: hidden;
 }
 
+.topbtn{
+    position: fixed;
+    text-align: center;
+    font-size: 4vw;
+    width: 4vw;
+    height: 4vw;
+    background-color: #873edf;
+    border-radius: 30%;
+    bottom: 3vw;
+    right: 5vw;
+}
+
 .navbar{
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row;
     background-color: #0c0a0a;
     color: #edeff3;
     height: auto;
+    width: 100%;
     justify-content: end;
     align-items: center;
     padding: 0 8%;
@@ -53,7 +68,7 @@ li:hover{
 .content{
     background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
     display: flex;
-    height: 90vh;
+    height: 100vh;
 }
 
 .left{
@@ -122,7 +137,7 @@ span:hover{
     background-repeat: no-repeat;
     background-size: cover;
     height:auto;
-    padding:5vh 0 15vh;
+    padding:9vh 0 15vh;
 }
 .cntr{
     background-color: transparent;
@@ -221,15 +236,20 @@ span:hover{
         border: none;
         cursor: pointer;
     }
+    button{
+        color: white;
+    }
    .foot{
-    text-align: center;
-    background-color: #340476;
-    color: white;
-    height: 9vh;
-    padding: 2vh 0;
-}
+        text-align: center;
+        background-color: #1f0446;
+        color: white;
+        height: auto;
+        padding: 2vh 0;
+    }
 @media (max-width: 800px) {
-    .navbar{flex-direction: column;
+    .navbar{
+        position: static;
+    flex-direction: column;
     justify-content: center;}
     a{
         display:block;
@@ -275,5 +295,9 @@ span:hover{
         width: 100px;
         margin: 25px;
     }
-    
+    .topbtn{
+        width: 7vw;
+        height: 7vw;
+        font-size: 8vw;
+    }
 }
