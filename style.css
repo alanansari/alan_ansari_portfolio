@@ -57,10 +57,10 @@ li:hover{
 }
 
 .left{
-    width: 55%;
+    width: 50%;
     justify-content: end;
     align-items: center;
-    padding: 150px 75px 50px 90px;
+    padding: 13vw 3vw 2vw 12vw;
     color: #edeff3;
 }
 .head-1{
@@ -86,7 +86,7 @@ span:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 50%;
 }
 
 .right>.img2{
@@ -195,26 +195,48 @@ span:hover{
     background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
     height:70vh;
 }
-.form{
-    margin:20vh 0%;
-}
-button {
+.btn{
     text-decoration: none;
     border: solid;
     border-radius: 5px;
     color: white;
     padding: 20px 35px;
-    border-color: #340476;
-    background-color: #340476;
     text-align: center;
     font-size: 15px;
     cursor: pointer;
 }
-button:hover{
+.btn0 {
+    border-color: #340476;
+    background-color: #340476;
+}
+.btn0:hover{
     border-color: #4e06ac;
     background-color: #4e06ac;
 }
+.btn1 {
+    border-color: #4242f9;
+    background-color: #4242f9;
+}
+.btn1:hover{
+    border-color: #062dac;
+    background-color: #062dac;
+}
+.btn2 {
+    border-color: #6c6cf1;
+    background-color: #6c6cf1;
+}
+.btn2:hover{
+    border-color: #0033db;
+    background-color: #0033db;
+}
+.btn1,.btn2{
+    display: block;
+    margin: 1.5vh auto;
+}
 
+.form{
+    margin:2vh 0;
+}
 .foot{
     text-align: center;
     background-color: #340476;
@@ -254,6 +276,13 @@ button:hover{
     .left>.head-2{
         font-size: 2em;
     }
+    .img2:hover~.img{
+        margin-left: -10%;
+    }
+    .img:hover{
+        margin-left: -10%;
+    }
+    
     .cntr{
         width:70vw;
     }
