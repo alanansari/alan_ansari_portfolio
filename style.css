@@ -71,6 +71,9 @@ li:hover{
     font-size: 3.5em;
     font-weight: 800;
 }
+.subtext{
+    font-size: 1.2em;
+}
 span{
     transition: .4s;
 }
@@ -113,7 +116,7 @@ span:hover{
     justify-content: space-evenly;
 }
 .item{
-    background-color: tomato;
+    background-color: transparent;
     height: 150px;
     width: 150px;
     margin: 20px;
@@ -130,6 +133,7 @@ span:hover{
 #project{
     background-color: #0c0a0a;
     height: auto;
+    margin: 0px;
 }
 .cards{
     display: flex;
@@ -143,6 +147,40 @@ span:hover{
     height: 210px;
     width: 300px;
     margin: 20px;
+}
+
+/* Contact Me section */
+
+#contact{
+    text-align: center;
+    height:70vh;
+}
+.form{
+    margin:20vh 0%;
+}
+button {
+    text-decoration: none;
+    border: solid;
+    border-radius: 5px;
+    color: white;
+    padding: 20px 35px;
+    border-color: #340476;
+    background-color: #340476;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    border-color: #1b013e;
+    background-color: #1b013e;
+}
+
+.foot{
+    text-align: center;
+    background-color: #44078e;
+    color: white;
+    height: 9vh;
+    padding: 2vh 0;
 }
 @media (max-width: 800px) {
     .navbar{flex-direction: column;
@@ -178,6 +216,11 @@ span:hover{
     }
     .cntr{
         width:70vw;
+    }
+    .item{
+        height: 100px;
+        width: 100px;
+        margin: 25px;
     }
     
 }
