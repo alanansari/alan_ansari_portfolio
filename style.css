@@ -8,6 +8,7 @@
 body{
     width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -40,7 +41,8 @@ li{
     transition: .5s;
 }
 li:hover{
-    border-bottom: 1px solid white;
+    border-bottom:1px solid white;
+    
 }
 .logo{
     font-size: 2.5em;
@@ -86,9 +88,24 @@ span:hover{
     align-items: center;
     width: 45%;
 }
-.right>img{
-    max-width: 20vw;
+
+.right>.img2{
+    max-width: 32vw;
+    margin-right: -22%;
+    margin-bottom: -7%;
+}
+.right>.img{
+    max-width: 9vw;
+    margin-right: -5%;
     border-radius: 15px;
+    transition: .5s;
+}
+
+.img2:hover~.img{
+    margin-left: -23%;
+}
+.img:hover{
+    margin-left: -23%;
 }
 
 /*Skills Section*/
@@ -138,21 +155,44 @@ span:hover{
 .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px auto;
+    justify-content: space-around;
+    margin: 20px auto 0;
     width: 70vw;
 }
 .card{
-    background-color: limegreen;
-    height: 210px;
+    border: 1px solid white;
+    height: 320px;
     width: 300px;
     margin: 20px;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px grey;
+}
+.c1{
+    height: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c1 img{
+    max-height: 90%;
+    max-width: 100%;
+}
+.c2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17%;
+    padding: 10px;
 }
 
 /* Contact Me section */
 
 #contact{
     text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
     height:70vh;
 }
 .form{
@@ -171,13 +211,13 @@ button {
     cursor: pointer;
 }
 button:hover{
-    border-color: #1b013e;
-    background-color: #1b013e;
+    border-color: #4e06ac;
+    background-color: #4e06ac;
 }
 
 .foot{
     text-align: center;
-    background-color: #44078e;
+    background-color: #340476;
     color: white;
     height: 9vh;
     padding: 2vh 0;
