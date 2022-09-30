@@ -60,7 +60,7 @@ li:hover{
     width: 50%;
     justify-content: end;
     align-items: center;
-    padding: 13vw 3vw 2vw 12vw;
+    padding: 14vw 3vw 2vw 12vw;
     color: #edeff3;
 }
 .head-1{
@@ -161,6 +161,7 @@ span:hover{
 }
 .card{
     border: 1px solid white;
+    border-radius: 15px;
     height: 320px;
     width: 300px;
     margin: 20px;
@@ -193,51 +194,34 @@ span:hover{
     text-align: center;
     color: white;
     background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
-    height:70vh;
 }
-.btn{
-    text-decoration: none;
-    border: solid;
-    border-radius: 5px;
-    color: white;
-    padding: 20px 35px;
-    text-align: center;
-    font-size: 15px;
-    cursor: pointer;
-}
-.btn0 {
-    border-color: #340476;
-    background-color: #340476;
-}
-.btn0:hover{
-    border-color: #4e06ac;
-    background-color: #4e06ac;
-}
-.btn1 {
-    border-color: #4242f9;
-    background-color: #4242f9;
-}
-.btn1:hover{
-    border-color: #062dac;
-    background-color: #062dac;
-}
-.btn2 {
-    border-color: #6c6cf1;
-    background-color: #6c6cf1;
-}
-.btn2:hover{
-    border-color: #0033db;
-    background-color: #0033db;
-}
-.btn1,.btn2{
-    display: block;
-    margin: 1.5vh auto;
-}
-
-.form{
-    margin:2vh 0;
-}
-.foot{
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20vh 20vh 35vh;
+    flex-wrap: wrap;
+    margin: 0 auto;
+   }
+   .link{
+       padding: 10px;
+       transition: .6s;
+   }
+   .link:hover{
+       opacity: 60%;
+       cursor: pointer;
+   }
+   i{
+    font-size: 5rem;
+    margin: 30px;
+    }
+    button,a{
+        background: none;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+   .foot{
     text-align: center;
     background-color: #340476;
     color: white;
