@@ -21,8 +21,8 @@ body{
     background-color: #6109cc;
     opacity: 60%;
     border-radius: 30%;
-    bottom: 3vw;
-    right: 5vw;
+    bottom: 5vw;
+    right: 5.5vw;
 }
 
 .navbar{
@@ -187,6 +187,7 @@ span:hover{
 .card:hover {
     cursor: pointer;
     box-shadow: 8px 8px grey;
+    transition: .4s;
 }
 .c1{
     height: 66%;
@@ -216,7 +217,7 @@ span:hover{
 }
 .contact{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20vh 20vh 35vh;
     flex-wrap: wrap;
@@ -250,6 +251,7 @@ span:hover{
         height: auto;
         padding: 2vh 0;
     }
+
 @media (max-width: 800px) {
     .navbar{
         position: static;
@@ -267,6 +269,8 @@ span:hover{
     }
     .content{
         flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
     }
     .left{
         width: 100%;
@@ -299,10 +303,13 @@ span:hover{
         width: 100px;
         margin: 25px;
     }
+    .contact{
+        padding: 9vh 20vh 15vh;
+    }
     .topbtn{
         display: block;
-        width: 7vw;
-        height: 7vw;
+        width: 8vw;
+        height: 8vw;
         font-size: 8vw;
     }
 }
