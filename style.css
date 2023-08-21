@@ -1,11 +1,19 @@
+/*font-family: 'JetBrains Mono', monospace;*/
+
 *{
     margin: 0;
     padding: 0;
-    font-family:  'Abril Fatface', sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+html{
+    scroll-snap-type: y proximity;
+}
+section{
+    scroll-snap-align: start;
+}
 body{
+    font-family:  'Quicksand','Abril Fatface', sans-serif;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -27,6 +35,7 @@ body{
 
 .navbar{
     position: fixed;
+    z-index: 1;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -46,24 +55,24 @@ a{
     text-decoration: none;
     color: white;
     text-align: center;
+    cursor: pointer;
 }
 li{
     display: inline-block;
     text-align: center;
     font-size: 18px;
     padding: 10px;
-    margin: 10px;
-    border-bottom: 1px solid transparent ;
+    margin: 0 10px;
+    border-bottom: 1.5px solid transparent ;
     cursor: pointer;
-    transition: .5s;
+    transition: .3s;
 }
 li:hover{
-    border-bottom:1px solid white;
-    
+    border-bottom: 1.5px solid #c2c2c2;
 }
 .logo{
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 800;
     margin-right:auto;
 }
 
@@ -75,7 +84,7 @@ li:hover{
 
 .left{
     width: 50%;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     padding: 14vw 3vw 2vw 12vw;
     color: #edeff3;
@@ -87,11 +96,33 @@ li:hover{
 }
 .head-2{
     background-color: transparent;
-    font-size: 3.5em;
+    font-size: 2em;
     font-weight: 800;
 }
 .subtext{
-    font-size: 1.2em;
+    padding: 1vh 0;
+    font-size: 1em;
+    color: #999a9b;
+}
+.plinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    padding: 0.7em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #971127;
+    color: #edeff3;
+    font-size: 1em;
+    transition: 0.3s;
+}
+.plinks:hover{
+    transform: translateY(-1.2vh);
+    color: #971127;
+    background-color: #edeff3;
 }
 span{
     transition: .4s;
@@ -105,15 +136,21 @@ span:hover{
     align-items: center;
     width: 50%;
 }
-
-.right>.img2{
+.right-sm{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-right: 15vw;
+    align-items: center;
+}
+.right-sm>.img2{
     max-width: 32vw;
     margin-right: -22%;
     margin-bottom: -7%;
 }
-.right>.img{
+.right-sm>.img{
     max-width: 9vw;
-    margin-right: -5%;
+    margin-right: -15%;
     border-radius: 15px;
     transition: .5s;
 }
@@ -125,7 +162,8 @@ span:hover{
     margin-left: -23%;
 }
 
-/*Skills Section*/
+/*********************               Skills Section             ******************/
+
 #skills,#project{
     text-align: center;
     color: white;
@@ -139,33 +177,42 @@ span:hover{
     background-repeat: no-repeat;
     background-size: cover;
     height:auto;
-    padding:9vh 0 15vh;
+    padding: 11vh 0 10vh;
 }
 .cntr{
+    font-family: 'JetBrains Mono', monospace;
     background-color: transparent;
-    margin: 30px auto;
-    width: 57vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: 5vh auto;
+    padding: 3vh 8vw;
+    width: 55vw;
+    height: 67vh;
+    text-align: start;
 }
-.item{
-    background-color: transparent;
-    height: 150px;
-    width: 150px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
-.item>i{
-    font-size: 8em;
+
+.subhead{
+    color: #ebeb5790;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 1vh 0 2vh;
+}
+
+.points{
+    color: green;
+    padding: 0 0 2.5vh;
 }
 
 /*Projects section*/
 
 #project{
-    padding-top: 1vh;
+    padding-top: 2.3vh;
     background-color: #0c0a0a;
     height: auto;
     margin: 0px;
@@ -173,21 +220,21 @@ span:hover{
 .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px auto 0;
-    width: 70vw;
+    justify-content: center;
+    margin: 25px auto 0;
+    width: 60vw;
 }
 .card{
-    border: 1px solid white;
+    border: 1px solid #484848;
     border-radius: 15px;
-    height: 320px;
-    width: 300px;
-    margin: 20px;
+    height: 275px;
+    width: 250px;
+    margin: 15px 30px;
 }
 .card:hover {
     cursor: pointer;
-    box-shadow: 8px 8px grey;
-    transition: .4s;
+    box-shadow: 3px 3px 10px #3f3f3f;
+    transition: .2s;
 }
 .c1{
     height: 66%;
@@ -205,12 +252,13 @@ span:hover{
     align-items: center;
     height: 17%;
     padding: 10px;
+    font-size: small;
 }
 
 /* Contact Me section */
 
 #contact{
-    padding-top: 3vh;
+    padding-top: 1vh;
     text-align: center;
     color: white;
     background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
@@ -219,7 +267,7 @@ span:hover{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20vh 20vh 35vh;
+    padding: 18vh 20vh 30vh;
     flex-wrap: wrap;
     margin: 0 auto;
    }
@@ -271,6 +319,8 @@ span:hover{
         flex-direction: column;
         height: auto;
         padding-bottom: 20px;
+        justify-content: center;
+        align-items: center;
     }
     .left{
         width: 100%;
@@ -298,6 +348,9 @@ span:hover{
     .cntr{
         width:70vw;
     }
+    .plinks{
+        width: 60vw;
+    }
     .item{
         height: 100px;
         width: 100px;
@@ -307,7 +360,7 @@ span:hover{
         padding: 9vh 20vh 15vh;
     }
     .topbtn{
-        display: block;
+        display: inline;
         width: 8vw;
         height: 8vw;
         font-size: 8vw;
