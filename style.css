@@ -180,7 +180,7 @@ span:hover{
     margin: 5vh auto;
     padding: 3vh 8vw;
     width: 55vw;
-    height: 67vh;
+    height: auto;
     text-align: start;
 }
 
