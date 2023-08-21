@@ -6,12 +6,6 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-html{
-    scroll-snap-type: y proximity;
-}
-section{
-    scroll-snap-align: start;
-}
 body{
     font-family:  'Quicksand','Abril Fatface', sans-serif;
     width: 100%;
