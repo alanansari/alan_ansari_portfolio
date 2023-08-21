@@ -98,6 +98,7 @@ li:hover{
     background-color: transparent;
     font-size: 2em;
     font-weight: 800;
+    margin-bottom: 10vh;
 }
 .subtext{
     padding: 1vh 0;
@@ -214,27 +215,31 @@ span:hover{
 #project{
     padding-top: 2.3vh;
     background-color: #0c0a0a;
-    height: auto;
+    height: 100vh;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 25px auto 0;
-    width: 60vw;
+    width: 90vw;
 }
 .card{
-    border: 1px solid #484848;
+    background: linear-gradient(135deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.012));
     border-radius: 15px;
     height: 275px;
     width: 250px;
     margin: 15px 30px;
+    transition: .3s;
 }
 .card:hover {
     cursor: pointer;
-    box-shadow: 3px 3px 10px #3f3f3f;
-    transition: .2s;
+    transform: translateY(-1.5vh) scale(1.01);
 }
 .c1{
     height: 66%;
@@ -273,10 +278,10 @@ span:hover{
    }
    .link{
        padding: 10px;
-       transition: .6s;
+       transition: .3s;
    }
    .link:hover{
-       opacity: 60%;
+       transform: translateY(-2vh);
        cursor: pointer;
    }
    i{
