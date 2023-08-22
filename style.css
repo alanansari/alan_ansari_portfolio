@@ -92,7 +92,7 @@ li:hover{
     background-color: transparent;
     font-size: 2em;
     font-weight: 800;
-    margin-bottom: 10vh;
+    margin-bottom: 6vh;
 }
 .subtext{
     padding: 1vh 0;
@@ -323,7 +323,11 @@ span:hover{
     }
     .left{
         width: 100%;
-        padding-top: 50px;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .left>div{
         text-align: center;
@@ -349,6 +353,9 @@ span:hover{
     }
     .plinks{
         width: 60vw;
+    }
+    #project{
+        height: auto;
     }
     .item{
         height: 100px;
