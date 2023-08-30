@@ -209,7 +209,8 @@ span:hover{
 #project{
     padding-top: 2.3vh;
     background-color: #0c0a0a;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin: 0px;
     display: flex;
     flex-direction: column;
