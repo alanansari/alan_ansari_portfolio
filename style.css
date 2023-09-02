@@ -2,6 +2,7 @@
 :root{
     --x: 0px;
     --y: 0px;
+    --rad: 10rem;
 }
 *{
     margin: 0;
@@ -244,7 +245,7 @@ span:hover{
     color: #38ae657b;
     overflow: hidden;
     z-index: -2;
-    -webkit-mask-image: radial-gradient(16rem circle at var(--x) var(--y), rgb(17, 16, 16) 60%, rgba(24, 23, 23, 0.658) 60%, rgba(9, 6, 6, 0.712) 100%);
+    -webkit-mask-image: radial-gradient(var(--rad) circle at var(--x) var(--y), rgb(17, 16, 16) 60%, rgba(24, 23, 23, 0.658) 60%, rgba(9, 6, 6, 0.712) 100%);
     mask-image: none;
 }
 .card{

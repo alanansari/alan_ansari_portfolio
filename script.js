@@ -1,6 +1,16 @@
-let box = document.getElementById('box');
+const box = document.getElementById('box');
 const body = document.querySelector('body');
 const root = document.documentElement;
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.onmousemove = e => {
+        root.style.setProperty('--rad', '16rem');
+    }
+    card.onmouseleave = e => {
+        root.style.setProperty('--rad', '10rem');
+    }
+});
  
 document.onmousemove = evt => {
     let x = (evt.clientX);
