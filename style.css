@@ -241,7 +241,7 @@ span:hover{
     left: 0;
     height: 100%;
     width: 100%;
-    color: #10b15371;
+    color: #38ae657b;
     overflow: hidden;
     z-index: -2;
     -webkit-mask-image: radial-gradient(16rem circle at var(--x) var(--y), rgb(17, 16, 16) 60%, rgba(24, 23, 23, 0.658) 60%, rgba(9, 6, 6, 0.712) 100%);
@@ -382,6 +382,10 @@ span:hover{
     #project{
         height: auto;
     }
+    #box{
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
     .item{
         height: 100px;
         width: 100px;
@@ -395,5 +399,6 @@ span:hover{
         width: 8vw;
         height: 8vw;
         font-size: 8vw;
+        z-index: 10;
     }
 }
