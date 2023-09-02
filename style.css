@@ -1,5 +1,8 @@
 /*font-family: 'JetBrains Mono', monospace;*/
-
+:root{
+    --x: 0px;
+    --y: 0px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +32,7 @@ body{
 
 .navbar{
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -92,7 +95,8 @@ li:hover{
     background-color: transparent;
     font-size: 2em;
     font-weight: 800;
-    margin-bottom: 6vh;
+    margin-bottom: 3vh;
+    z-index: 2;
 }
 .subtext{
     padding: 1vh 0;
@@ -207,6 +211,7 @@ span:hover{
 /*Projects section*/
 
 #project{
+    position: relative;
     padding-top: 2.3vh;
     background-color: #0c0a0a;
     min-height: 100vh;
@@ -221,16 +226,35 @@ span:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 25px auto 0;
+    margin: 0 auto 0;
+    padding: 4vh 0 4vh;
     width: 90vw;
+    z-index: 1;
+}
+
+#box{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #10b15371;
+    overflow: hidden;
+    z-index: -2;
+    -webkit-mask-image: radial-gradient(16rem circle at var(--x) var(--y), rgb(17, 16, 16) 60%, rgba(24, 23, 23, 0.658) 60%, rgba(9, 6, 6, 0.712) 100%);
+    mask-image: none;
 }
 .card{
-    background: linear-gradient(135deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.012));
+    background: linear-gradient(135deg, rgba(75, 75, 75, 0.989), rgba(36, 36, 36, 0.728));
     border-radius: 15px;
     height: 275px;
     width: 250px;
     margin: 15px 30px;
     transition: .3s;
+    z-index: 5;
 }
 .card:hover {
     cursor: pointer;
