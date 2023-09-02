@@ -20,7 +20,7 @@ document.onmousemove = evt => {
     root.style.setProperty('--y', y+'px');
 };
 
-let string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+let string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*()^%$@!~`{}[]|\/?.,><;:+=-_';
 
 function randomChar() {
     let random = Math.floor(Math.random() * string.length);
@@ -36,9 +36,9 @@ function randomSrting() {
 }
 
 body.onmousemove = function(e) {
-    box.innerHTML = randomSrting();
+    box.innerText = randomSrting();
 }
 
 body.onscroll = function(e) {
-    box.innerHTML = randomSrting();
+    box.innerText = randomSrting();
 }

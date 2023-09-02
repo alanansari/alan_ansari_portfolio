@@ -20,15 +20,6 @@ body{
 .topbtn{
     display: none;
     position: fixed;
-    text-align: center;
-    font-size: 4vw;
-    width: 4vw;
-    height: 4vw;
-    background-color: #6109cc;
-    opacity: 60%;
-    border-radius: 30%;
-    bottom: 5vw;
-    right: 5.5vw;
 }
 
 .navbar{
@@ -54,13 +45,13 @@ a{
     color: white;
     text-align: center;
     cursor: pointer;
+    margin: 0 .5vw;
 }
 li{
     display: inline-block;
     text-align: center;
     font-size: 18px;
     padding: 10px;
-    margin: 0 10px;
     border-bottom: 1.5px solid transparent ;
     cursor: pointer;
     transition: .3s;
@@ -334,7 +325,7 @@ span:hover{
         height: auto;
     }
     a{
-        display:block;
+        display: block;
     }
     nav>ul>li{
         display: block;
@@ -361,7 +352,7 @@ span:hover{
         text-align: center;
     }
     .right{
-        width: 100%;
+        display: none;
     }
     .left>.head-1{
         font-size: 2em;
@@ -413,10 +404,19 @@ span:hover{
         flex-direction: column;
     }
     .topbtn{
-        display: inline;
-        width: 8vw;
-        height: 8vw;
-        font-size: 8vw;
+        display: flex;
+        position: fixed;
+        font-size: 10vw;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        width: 9vw;
+        height: 9vw;
+        background-color: #748fe8;
+        opacity: 60%;
+        border-radius: 50%;
+        bottom: 5vw;
+        right: 5.5vw;
         z-index: 10;
     }
 }
