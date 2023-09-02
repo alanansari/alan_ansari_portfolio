@@ -166,7 +166,7 @@ span:hover{
 #skills,#project{
     text-align: center;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
 }
 #skills{
     background-image: url("img/bg1.jpg");
@@ -327,8 +327,11 @@ span:hover{
 @media (max-width: 800px) {
     .navbar{
         position: static;
-    flex-direction: column;
-    justify-content: center;}
+        flex-direction: column;
+        justify-content: center;
+        min-height: 30vh;
+        height: auto;
+    }
     a{
         display:block;
     }
@@ -341,9 +344,8 @@ span:hover{
     }
     .content{
         flex-direction: column;
+        min-height: 70vh;
         height: auto;
-        padding-bottom: 20px;
-        justify-content: center;
         align-items: center;
     }
     .left{
@@ -362,9 +364,15 @@ span:hover{
     }
     .left>.head-1{
         font-size: 2em;
+        margin: 5vh 0 0;
     }
     .left>.head-2{
         font-size: 2em;
+        margin: 0 0 2vh;
+    }
+    .subtext{
+        margin: 2vh 0 4vh;
+        font-size: 1.2rem;
     }
     .img2:hover~.img{
         margin-left: -10%;
@@ -372,12 +380,12 @@ span:hover{
     .img:hover{
         margin-left: -10%;
     }
-    
     .cntr{
         width:70vw;
     }
     .plinks{
-        width: 60vw;
+        width: 50vw;
+        margin: 5vh 0;
     }
     #project{
         height: auto;
@@ -391,8 +399,17 @@ span:hover{
         width: 100px;
         margin: 25px;
     }
+    #contact{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .contact{
-        padding: 9vh 20vh 15vh;
+        padding: 8vh 0 10vh;
+        display: flex;
+        flex-direction: column;
     }
     .topbtn{
         display: inline;
