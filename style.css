@@ -240,6 +240,7 @@ span:hover{
     margin: 15px 30px;
     transition: .3s;
     z-index: 5;
+    overflow-x: hidden;
 }
 .card:hover {
     cursor: pointer;
@@ -357,11 +358,6 @@ span:hover{
 }
 
 @media (max-width: 800px) {
-
-    .card{
-        overflow-x: hidden;
-    }
-
     @keyframes slideFromDown {
         from{
             transform: translateY(30%);
@@ -370,6 +366,35 @@ span:hover{
         to{
             transform: translateY(-40%);
         }
+    }
+    @keyframes slideFromRight {
+        from{
+            transform: translateX(-20%);
+        }
+    
+        to{
+            transform: translateX(20%);
+        }
+    }
+    @keyframes slideFromLeft {
+        from{
+            transform: translateX(20%);
+        }
+    
+        to{
+            transform: translateX(-20%);
+        }
+    }
+    .card{
+        flex-direction: column;
+    }
+    .c1,.c2{
+        width: 100%;
+        height: 50%;
+    }
+    .c1>img,.c2>img{
+        max-height: 100%;
+        max-width: 90%;
     }
     .c3{
         width: 100%;
