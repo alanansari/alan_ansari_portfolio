@@ -1,9 +1,4 @@
 /*font-family: 'JetBrains Mono', monospace;*/
-:root{
-    --x: 0px;
-    --y: 0px;
-    --rad: 10rem;
-}
 *{
     margin: 0;
     padding: 0;
@@ -28,7 +23,7 @@ body{
     top: 0;
     display: flex;
     flex-direction: row;
-    background-color: #0c0a0a;
+    background-color: #070707;
     color: #edeff3;
     height: auto;
     width: 100%;
@@ -64,11 +59,12 @@ li:hover{
     font-weight: 800;
     margin-right:auto;
 }
-
-.content{
-    background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
+/************************             HOME         ************************/
+#home{
+    background-image: linear-gradient(to bottom right, #070707, rgb(58, 3, 104));
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .left{
@@ -99,20 +95,20 @@ li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    width: 15vw;
     padding: 0.7em;
     margin: 0.5em;
     border: none;
     border-radius: 10px;
     font-weight: bolder;
-    background-color: #971127;
+    background-color: #070707;
     color: #edeff3;
     font-size: 1em;
     transition: 0.3s;
 }
 .plinks:hover{
     transform: translateY(-1.2vh);
-    color: #971127;
+    color: #070707;
     background-color: #edeff3;
 }
 span{
@@ -161,12 +157,7 @@ span:hover{
     min-height: 100vh;
 }
 #skills{
-    background-image: url("img/bg1.jpg");
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to right bottom, black, #2f0353);
     height:auto;
     padding: 11vh 0 10vh;
 }
@@ -200,7 +191,7 @@ span:hover{
     padding: 0 0 2.5vh;
 }
 
-/*Projects section*/
+/*****************************         Projects section           ****************************/
 
 #project{
     position: relative;
@@ -236,14 +227,16 @@ span:hover{
     color: #38ae657b;
     overflow: hidden;
     z-index: -2;
-    -webkit-mask-image: radial-gradient(var(--rad) circle at var(--x) var(--y), rgb(17, 16, 16) 60%, rgba(24, 23, 23, 0.658) 60%, rgba(9, 6, 6, 0.712) 100%);
-    mask-image: none;
 }
 .card{
-    background: linear-gradient(135deg, rgba(75, 75, 75, 0.989), rgba(36, 36, 36, 0.728));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #35055cfc, #2d0051fc);
     border-radius: 15px;
-    height: 275px;
-    width: 250px;
+    height: 200px;
+    width: 60vw;
     margin: 15px 30px;
     transition: .3s;
     z-index: 5;
@@ -252,26 +245,28 @@ span:hover{
     cursor: pointer;
     transform: translateY(-1.5vh) scale(1.01);
 }
-.c1{
-    height: 66%;
+.c1,.c2{
+    height: 100%;
+    width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    font-size: medium;
 }
-.c1 img{
+.c1>img,.c2>img{
     max-height: 90%;
     max-width: 100%;
+    border-radius: 15px;
 }
-.c2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 17%;
-    padding: 10px;
-    font-size: small;
+.c3{
+    color: #b1b1b1;
+    padding: 1vh;
+    width: 75%;
 }
 
-/* Contact Me section */
+/**************************       Contact Me section           ***************************8*/
 
 #contact{
     padding-top: 1vh;
@@ -316,7 +311,72 @@ span:hover{
         padding: 2vh 0;
     }
 
+@keyframes slideFromDown{
+    from{
+        transform: translateY(30%);
+    }
+
+    to{
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes slideFromRight {
+    from{
+        transform: translateX(80%);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes slideFromLeft {
+    from{
+        transform: translateX(-100%);
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}
+
+.cntr{
+    animation: slideFromDown 1s ease-out;
+    animation-timeline: scroll(nearest);
+}
+
+.zoom:nth-of-type(odd){
+    animation: slideFromRight .5s ease-in;
+    animation-timeline: scroll(nearest);
+}
+.zoom:nth-of-type(even){
+    animation: slideFromLeft .5s ease-in;
+    animation-timeline: scroll(nearest);
+}
+
 @media (max-width: 800px) {
+
+    .card{
+        overflow-x: hidden;
+    }
+
+    @keyframes slideFromDown {
+        from{
+            transform: translateY(30%);
+        }
+    
+        to{
+            transform: translateY(-40%);
+        }
+    }
+    .c3{
+        width: 100%;
+        font-size: small;
+    }
+
+
     .navbar{
         position: static;
         flex-direction: column;
@@ -334,7 +394,7 @@ span:hover{
         font-size: 2em;
         margin: 10px auto;
     }
-    .content{
+    #home{
         flex-direction: column;
         min-height: 70vh;
         height: auto;
@@ -420,3 +480,5 @@ span:hover{
         z-index: 10;
     }
 }
+
+
