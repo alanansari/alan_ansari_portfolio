@@ -449,7 +449,7 @@ span:hover{
     }
     .subtext{
         margin: 2vh 0 4vh;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .img2:hover~.img{
         margin-left: -10%;
