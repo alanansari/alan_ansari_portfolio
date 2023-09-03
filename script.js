@@ -1,7 +1,7 @@
 const box = document.getElementById('box');
 const body = document.querySelector('body');
 
-let string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*()^%$@!~`{}[]|\/?.,><;:+=-_';
+let string = 'abcdefghijklmnopqrstuvwxyz大家好艾伦安萨здвтвйтэтлннनमस्तेमैंअपनेसपनेछोड़दोरमरजाओडेवलपरहूंиABCDEFGHIJKLMNOPQRSTUVWXYZこんにちはアラン夢を諦めて死んでくださいアンサリです';
 
 function randomChar() {
     let random = Math.floor(Math.random() * string.length);
@@ -10,14 +10,10 @@ function randomChar() {
 
 function randomSrting() {
     let string = '';
-    for(let i = 0; i < 10000; i++) {
+    for(let i = 0; i < 7000; i++) {
         string += randomChar();
     }
     return string;
-}
-
-body.onmousemove = function(e) {
-    box.innerText = randomSrting();
 }
 
 body.onscroll = function(e) {

@@ -7,7 +7,7 @@
 }
 body{
     font-family:  'Quicksand','Abril Fatface', sans-serif;
-    width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -26,7 +26,7 @@ body{
     background-color: #070707;
     color: #edeff3;
     height: auto;
-    width: 100%;
+    width: 100vw;
     justify-content: end;
     align-items: center;
     padding: 0 8%;
@@ -46,8 +46,10 @@ li{
     display: inline-block;
     text-align: center;
     font-size: 18px;
-    padding: 10px;
-    border-bottom: 1.5px solid transparent ;
+    padding: .4rem 1rem;
+    border: 1.5px solid transparent ;
+    border-radius: .1rem;
+    background-color: #1a1120;
     cursor: pointer;
     transition: .3s;
 }
@@ -96,12 +98,13 @@ li:hover{
     justify-content: center;
     align-items: center;
     width: 15vw;
-    padding: 0.7em;
-    margin: 0.5em;
+    padding: 0.7rem;
+    margin: 2rem 0 0;
     border: none;
     border-radius: 10px;
     font-weight: bolder;
-    background-color: #070707;
+    background-color: #29044eb9;
+    box-shadow: -7px -9px 2px #070707;
     color: #edeff3;
     font-size: 1em;
     transition: 0.3s;
@@ -110,6 +113,7 @@ li:hover{
     transform: translateY(-1.2vh);
     color: #070707;
     background-color: #edeff3;
+    box-shadow: 4px 6px 2px  #070707;
 }
 span{
     transition: .4s;
@@ -205,15 +209,6 @@ span:hover{
     justify-content: center;
     align-items: center;
 }
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto 0;
-    padding: 4vh 0 4vh;
-    width: 90vw;
-    z-index: 1;
-}
 
 #box{
     position: absolute;
@@ -228,6 +223,16 @@ span:hover{
     overflow: hidden;
     z-index: -2;
 }
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 0;
+    padding: 4vh 0 4vh;
+    width: 90vw;
+    z-index: 1;
+}
 .card{
     display: flex;
     flex-direction: row;
@@ -239,8 +244,8 @@ span:hover{
     width: 60vw;
     margin: 15px 30px;
     transition: .3s;
-    z-index: 5;
-    overflow-x: hidden;
+    z-index: 4;
+    overflow: hidden;
 }
 .card:hover {
     cursor: pointer;
@@ -357,7 +362,7 @@ span:hover{
     animation-timeline: scroll(nearest);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
     @keyframes slideFromDown {
         from{
             transform: translateY(30%);
@@ -384,6 +389,14 @@ span:hover{
         to{
             transform: translateX(-15%);
         }
+    }
+    a{
+        margin: 0;
+    }
+    li{
+        width: 95vw;
+        padding: .6rem 1rem;
+        margin: .2vh 0;
     }
     .card{
         flex-direction: column;
@@ -414,6 +427,9 @@ span:hover{
     }
     nav>ul>li{
         display: block;
+    }
+    li:hover{
+        border: 1.5px solid transparent ;
     }
     .logo{
         font-size: 2em;
@@ -462,7 +478,7 @@ span:hover{
     }
     .plinks{
         width: 50vw;
-        margin: 5vh 0;
+        margin: 4vh;
     }
     #project{
         height: auto;
