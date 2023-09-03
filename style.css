@@ -369,20 +369,20 @@ span:hover{
     }
     @keyframes slideFromRight {
         from{
-            transform: translateX(-20%);
+            transform: translateX(-15%);
         }
     
         to{
-            transform: translateX(20%);
+            transform: translateX(15%);
         }
     }
     @keyframes slideFromLeft {
         from{
-            transform: translateX(20%);
+            transform: translateX(15%);
         }
     
         to{
-            transform: translateX(-20%);
+            transform: translateX(-15%);
         }
     }
     .card{
