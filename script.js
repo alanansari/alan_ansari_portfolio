@@ -1,7 +1,7 @@
 const box = document.getElementById('box');
 const body = document.querySelector('body');
 
-let string = 'abcdefghijklmnopqrstuvwxyz大家好艾伦安萨здвтвйтэтлннनमस्तेमैंअपनेसपनेछोड़दोरमरजाओडेवलपरहूंиABCDEFGHIJKLMNOPQRSTUVWXYZこんにちはアラン夢を諦めて死んでくださいアンサリです';
+let string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function randomChar() {
     let random = Math.floor(Math.random() * string.length);
@@ -10,7 +10,7 @@ function randomChar() {
 
 function randomSrting() {
     let string = '';
-    for(let i = 0; i < 7000; i++) {
+    for(let i = 0; i < 8000; i++) {
         string += randomChar();
     }
     return string;

@@ -1,4 +1,12 @@
 /*font-family: 'JetBrains Mono', monospace;*/
+:root{
+    --primary: #070707;
+    --secondary: #5820a0;
+    --tertiary: #e7e7e7;
+    --text1: #bbbdc1;
+    --text2: #894dd6;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,8 +31,8 @@ body{
     top: 0;
     display: flex;
     flex-direction: row;
-    background-color: #070707;
-    color: #edeff3;
+    background-color: var(--primary);
+    color: var(--tertiary);
     height: auto;
     width: 100vw;
     justify-content: end;
@@ -49,12 +57,11 @@ li{
     padding: .4rem 1rem;
     border: 1.5px solid transparent ;
     border-radius: .1rem;
-    background-color: #1a1120;
     cursor: pointer;
     transition: .3s;
 }
 li:hover{
-    border-bottom: 1.5px solid #c2c2c2;
+    border-bottom: 1.5px solid var(--tertiary);
 }
 .logo{
     font-size: 2.5em;
@@ -63,7 +70,7 @@ li:hover{
 }
 /************************             HOME         ************************/
 #home{
-    background-image: linear-gradient(to bottom right, #070707, rgb(58, 3, 104));
+    background-image: linear-gradient(to bottom right, var(--primary), var(--primary));
     display: flex;
     min-height: 100vh;
     height: auto;
@@ -74,12 +81,12 @@ li:hover{
     justify-content: center;
     align-items: center;
     padding: 14vw 3vw 2vw 12vw;
-    color: #edeff3;
+    color: var(--tertiary);
 }
 .head-1{
     font-size: 2.5em;
     font-weight: 800;
-    color: #9fb6e3;
+    color: var(--text2);
 }
 .head-2{
     background-color: transparent;
@@ -103,9 +110,9 @@ li:hover{
     border: none;
     border-radius: 10px;
     font-weight: bolder;
-    background-color: #29044eb9;
-    box-shadow: -7px -9px 2px #070707;
-    color: #edeff3;
+    background-color: var(--secondary);
+    box-shadow: -4px -6px 2px var(--text2);
+    color: var(--tertiary);
     font-size: 1em;
     transition: 0.3s;
 }
@@ -113,13 +120,13 @@ li:hover{
     transform: translateY(-1.2vh);
     color: #070707;
     background-color: #edeff3;
-    box-shadow: 4px 6px 2px  #070707;
+    box-shadow: 4px 6px 2px  var(--text2);
 }
 span{
     transition: .4s;
 }
 span:hover{
-    color: #873edf;
+    color: var(--text2);
 }
 .right{
     display: flex;
@@ -161,7 +168,7 @@ span:hover{
     min-height: 100vh;
 }
 #skills{
-    background-image: linear-gradient(to right bottom, black, #2f0353);
+    background-image: linear-gradient(to right bottom, var(--primary), var(--primary));
     height:auto;
     padding: 11vh 0 10vh;
 }
@@ -176,7 +183,7 @@ span:hover{
 }
 
 .glass{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -184,14 +191,14 @@ span:hover{
 }
 
 .subhead{
-    color: #ebeb5790;
+    color: var(--text1);
     font-size: 1.2em;
     font-weight: 400;
     padding: 1vh 0 2vh;
 }
 
 .points{
-    color: green;
+    color: var(--tertiary);
     padding: 0 0 2.5vh;
 }
 
@@ -200,7 +207,7 @@ span:hover{
 #project{
     position: relative;
     padding-top: 2.3vh;
-    background-color: #0c0a0a;
+    background-color: var(--primary);
     min-height: 100vh;
     height: auto;
     margin: 0px;
@@ -238,7 +245,9 @@ span:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #35055cfc, #2d0051fc);
+    background: linear-gradient(135deg, var(--text2), var(--secondary));
+    color: var(--tertiary);
+    font-weight: 900;
     border-radius: 15px;
     height: 200px;
     width: 60vw;
@@ -267,7 +276,8 @@ span:hover{
     border-radius: 15px;
 }
 .c3{
-    color: #b1b1b1;
+    color: var(--text1);
+    font-weight: 700;
     padding: 1vh;
     width: 75%;
 }
@@ -275,47 +285,95 @@ span:hover{
 /**************************       Contact Me section           ***************************8*/
 
 #contact{
-    padding-top: 1vh;
+    padding-top: 1.5vh;
     text-align: center;
     color: white;
-    background-image: linear-gradient(to bottom right, black, rgb(58, 3, 104));
+    background-image: linear-gradient(to bottom right, var(--primary), var(--primary));
 }
 .contact{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 18vh 20vh 30vh;
+    padding: 4vh;
     flex-wrap: wrap;
     margin: 0 auto;
    }
-   .link{
-       padding: 10px;
-       transition: .3s;
-   }
-   .link:hover{
-       transform: translateY(-2vh);
-       cursor: pointer;
-   }
-   i{
-    font-size: 5rem;
-    margin: 30px;
-    }
-    button,a{
-        background: none;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-    }
-    button{
-        color: white;
-    }
-   .foot{
-        text-align: center;
-        background-color: #1f0446;
-        color: white;
-        height: auto;
-        padding: 2vh 0;
-    }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 2vh 0;
+    margin: 0 auto;
+    min-height: 60vh;
+    border: var(--text1) 1.5px solid;
+    border-radius: 15px;
+}
+form>input{
+    width: 35vw;
+    padding: 2vh;
+    margin: 1vh 0;
+    border: var(--text1) 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text1);
+    font-size: 1rem;
+    transition: .3s;
+}
+.submit{
+    border: transparent;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    margin-top: 1.5rem;
+}
+.submit:hover{
+    cursor: pointer;
+}
+textarea{
+    width: 35vw;
+    max-width: 48vw;
+    min-width: 20vw;
+    min-height: 8vh;
+    padding: 2vh;
+    margin: 0;
+    border: var(--text1) 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text1);
+    font-size: 1rem;
+    transition: .3s;
+}
+.link{
+    padding: 10px;
+    transition: .3s;
+}
+.link:hover{
+    transform: translateY(-1vh);
+    cursor: pointer;
+}
+i{
+    font-size: 2rem;
+    color: var(--text1);
+    margin: 1px;
+}
+button,a{
+    background: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+button{
+    color: white;
+}
+.foot{
+    text-align: center;
+    background-color: var(--secondary);
+    color: white;
+    height: auto;
+    padding: .5vh 0;
+}
 
 @keyframes slideFromDown{
     from{
@@ -397,6 +455,7 @@ span:hover{
         width: 95vw;
         padding: .6rem 1rem;
         margin: .2vh 0;
+        background-color: #1a1919;
     }
     .card{
         flex-direction: column;
@@ -413,8 +472,6 @@ span:hover{
         width: 100%;
         font-size: small;
     }
-
-
     .navbar{
         position: static;
         flex-direction: column;
@@ -500,9 +557,26 @@ span:hover{
         align-items: center;
     }
     .contact{
-        padding: 8vh 0 10vh;
+        padding: 1vh 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    }
+    form{
+        width: 90vw;
+        padding: 2vh 0;
+        margin: 0 auto;
+        min-height: 60vh;
+    }
+    form>input{
+        width: 80vw;
+        padding: 2vh;
+        margin: 1vh 0;
+    }
+    textarea{
+        width: 80vw;
+        padding: 2vh;
+        margin: 0;
+        max-width: 88vw;
     }
     .topbtn{
         display: flex;
