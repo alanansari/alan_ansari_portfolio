@@ -285,7 +285,7 @@ span:hover{
 /**************************       Contact Me section           ***************************8*/
 
 #contact{
-    padding-top: 1.5vh;
+    padding-top: 4vh;
     text-align: center;
     color: white;
     background-image: linear-gradient(to bottom right, var(--primary), var(--primary));
