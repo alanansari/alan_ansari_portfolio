@@ -1,10 +1,14 @@
 /*font-family: 'JetBrains Mono', monospace;*/
 :root{
-    --primary: #070707;
-    --secondary: #5820a0;
-    --tertiary: #e7e7e7;
-    --text1: #bbbdc1;
-    --text2: #894dd6;
+    --primary: #1a1c1d;
+    /* --primary: #fcfcfc; */
+    --secondary: #339bff;
+    --tertiary: #d9d6d1;
+    /* --tertiary: #1a1c1d; */
+    --text1: #d9d6d1;
+    /* --text1: #141414; */
+    --text2: #141414;
+    --font1: ;
 }
 
 *{
@@ -32,7 +36,7 @@ body{
     display: flex;
     flex-direction: row;
     background-color: var(--primary);
-    color: var(--tertiary);
+    color: var(--primary);
     height: auto;
     width: 100vw;
     justify-content: end;
@@ -45,11 +49,18 @@ nav>ul{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--tertiary);
     text-align: center;
     cursor: pointer;
-    margin: 0 .5vw;
 }
+
+.hoverlink{
+    text-decoration: underline;
+}
+.hoverlink:hover{
+    color: var(--secondary);
+}
+
 li{
     display: inline-block;
     text-align: center;
@@ -61,13 +72,24 @@ li{
     transition: .3s;
 }
 li:hover{
-    border-bottom: 1.5px solid var(--tertiary);
+    border-bottom: 1.5px solid var(--secondary);
 }
 .logo{
     font-size: 2.5em;
     font-weight: 800;
+    margin-left: 2.5rem;
     margin-right:auto;
 }
+
+.pebble{
+    margin: 3px;
+    padding: 4px;
+    border: transparent;
+    border-radius: 3px;
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
 /************************             HOME         ************************/
 #home{
     background-image: linear-gradient(to bottom right, var(--primary), var(--primary));
@@ -77,16 +99,16 @@ li:hover{
 }
 
 .left{
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 14vw 3vw 2vw 12vw;
+    padding: 14vw 3vw 2vw 11.5vw;
     color: var(--tertiary);
 }
 .head-1{
-    font-size: 2.5em;
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--text2);
+    color: var(--secondary);
 }
 .head-2{
     background-color: transparent;
@@ -97,8 +119,13 @@ li:hover{
 }
 .subtext{
     padding: 1vh 0;
-    font-size: 1em;
-    color: #999a9b;
+    font-size: 2.7rem;
+    color: var(--tertiary);
+}
+.bottomtext{
+    margin: 2rem 0 0;
+    width: 50%;
+    font-weight: 400;
 }
 .plinks{
     display: flex;
@@ -117,7 +144,6 @@ li:hover{
     transition: 0.3s;
 }
 .plinks:hover{
-    transform: translateY(-1.2vh);
     color: #070707;
     background-color: #edeff3;
     box-shadow: 4px 6px 2px  var(--text2);
@@ -126,7 +152,7 @@ span{
     transition: .4s;
 }
 span:hover{
-    color: var(--text2);
+    color: var(--secondary);
 }
 .right{
     display: flex;
@@ -164,7 +190,7 @@ span:hover{
 
 #skills,#project{
     text-align: center;
-    color: white;
+    color: var(--text1);
     min-height: 100vh;
 }
 #skills{
@@ -183,7 +209,6 @@ span:hover{
 }
 
 .glass{
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -217,20 +242,6 @@ span:hover{
     align-items: center;
 }
 
-#box{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    word-break: break-all;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    color: #38ae657b;
-    overflow: hidden;
-    z-index: -2;
-}
-
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -238,48 +249,87 @@ span:hover{
     margin: 0 auto 0;
     padding: 4vh 0 4vh;
     width: 90vw;
-    z-index: 1;
 }
 .card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, var(--text2), var(--secondary));
+    align-items: baseline;
+    background-color: var(--primary);
     color: var(--tertiary);
+    box-shadow: 3px 3px 5px 0px var(--text2);
     font-weight: 900;
     border-radius: 15px;
-    height: 200px;
-    width: 60vw;
+    height: 40vh;
+    width: 30vw;
     margin: 15px 30px;
     transition: .3s;
-    z-index: 4;
     overflow: hidden;
 }
-.card:hover {
-    cursor: pointer;
-    transform: translateY(-1.5vh) scale(1.01);
+.zoom{
+    padding: .5rem .25rem;
 }
 .c1,.c2{
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 10px;
     font-size: medium;
 }
+.c1{
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    height: 25%;
+}
+.c1>a>i{
+    font-size: 1.6rem;
+    margin: 1px;
+}
+
+.end{
+    margin-left: auto;
+}
+.end>a>i{
+    font-size: 1.6rem;
+    margin: .5rem;
+}
+.c2{
+    padding: 2vh 2vw;
+}
 .c1>img,.c2>img{
-    max-height: 90%;
-    max-width: 100%;
-    border-radius: 15px;
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 1vh;
+    align-self: center;
+    justify-self: center;
+}
+.c2{
+    font-size: x-large;
 }
 .c3{
-    color: var(--text1);
-    font-weight: 700;
+    color: var(--tertiary);
+    font-weight: 200;
+    font-size: medium;
     padding: 1vh;
+    margin-top: 2vh;
     width: 75%;
+    text-align: left;
+}
+
+.tech-stack{
+    width: 85%;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: small;
 }
 
 /**************************       Contact Me section           ***************************8*/
@@ -287,8 +337,8 @@ span:hover{
 #contact{
     padding-top: 4vh;
     text-align: center;
-    color: white;
-    background-image: linear-gradient(to bottom right, var(--primary), var(--primary));
+    color: var(--tertiary);
+    background-color: var(--primary);
 }
 .contact{
     display: flex;
@@ -307,51 +357,41 @@ form{
     padding: 2vh 0;
     margin: 0 auto;
     min-height: 60vh;
-    border: var(--text1) 1.5px solid;
     border-radius: 15px;
 }
-form>input{
+form>input,textarea{
     width: 35vw;
+    max-width: 35vw;
+    min-width: 35vw;
+    min-height: 10vh;
     padding: 2vh;
     margin: 1vh 0;
-    border: var(--text1) 1px solid;
-    border-radius: 5px;
+    border: none;
+    border-bottom: var(--text1) 1px solid;
     background-color: transparent;
     color: var(--text1);
     font-size: 1rem;
     transition: .3s;
 }
+form>input:focus,textarea:focus{
+    outline: none;
+    border: none;
+    border-bottom: var(--secondary) 1px solid;
+}
 .submit{
+    min-height: 7vh;
     border: transparent;
     border-radius: 5px;
     background-color: var(--secondary);
     color: var(--tertiary);
-    margin-top: 1.5rem;
+    margin-top: 3rem;
 }
 .submit:hover{
     cursor: pointer;
 }
-textarea{
-    width: 35vw;
-    max-width: 48vw;
-    min-width: 20vw;
-    min-height: 8vh;
-    padding: 2vh;
-    margin: 0;
-    border: var(--text1) 1px solid;
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--text1);
-    font-size: 1rem;
-    transition: .3s;
-}
 .link{
     padding: 10px;
     transition: .3s;
-}
-.link:hover{
-    transform: translateY(-1vh);
-    cursor: pointer;
 }
 i{
     font-size: 2rem;
@@ -362,7 +402,6 @@ button,a{
     background: none;
     text-decoration: none;
     border: none;
-    cursor: pointer;
 }
 button{
     color: white;
@@ -375,50 +414,6 @@ button{
     padding: .5vh 0;
 }
 
-@keyframes slideFromDown{
-    from{
-        transform: translateY(30%);
-    }
-
-    to{
-        transform: translateY(-50%);
-    }
-}
-
-@keyframes slideFromRight {
-    from{
-        transform: translateX(80%);
-    }
-
-    to{
-        transform: translateX(-100%);
-    }
-}
-
-
-@keyframes slideFromLeft {
-    from{
-        transform: translateX(-100%);
-    }
-
-    to{
-        transform: translateX(100%);
-    }
-}
-
-.cntr{
-    animation: slideFromDown 1s ease-out;
-    animation-timeline: scroll(nearest);
-}
-
-.zoom:nth-of-type(odd){
-    animation: slideFromRight .5s ease-in;
-    animation-timeline: scroll(nearest);
-}
-.zoom:nth-of-type(even){
-    animation: slideFromLeft .5s ease-in;
-    animation-timeline: scroll(nearest);
-}
 
 @media (max-width: 820px) {
     @keyframes slideFromDown {
