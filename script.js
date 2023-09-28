@@ -2,6 +2,8 @@ let toggle = document.getElementById('toggle');
 let r = document.querySelector(':root');
 let dark = true;
 let expand = false;
+let body = document.getElementsByTagName('body')[0];
+
 
 toggle.onclick = function() {
     toggle.removeChild(toggle.firstElementChild);
@@ -38,11 +40,14 @@ ham.onclick = function() {
     }
     ham.appendChild(newHam);
     expand = !expand;
-    // if (nav.style.display === 'none') {
-    //     nav.style.display = 'block';
-        
-    // } else {
-    //     nav.style.display = 'none';
-    //     newHam.classList.add('fa-solid', 'fa-bars');
-    // }
+}
+
+body.onresize = function() {
+    if (body.clientWidth > 820) {
+        nav.style.display = 'flex';
+        expand = true;
+    } else {
+        nav.style.display = 'none';
+        expand = false;
+    }
 }
