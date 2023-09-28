@@ -59,7 +59,6 @@ a{
 .hoverlink:hover{
     color: var(--secondary);
 }
-
 li{
     display: inline-block;
     text-align: center;
@@ -85,6 +84,14 @@ li:hover{
     color: var(--tertiary);
     right: 3vw;
     z-index: 3;
+}
+#ham{
+    display: none;
+    position: fixed;
+    top: 1vh;
+    color: var(--tertiary);
+    left: 2vw;
+    z-index: 999;
 }
 .pebble{
     margin: 3px;
@@ -120,7 +127,6 @@ li:hover{
     font-size: 2em;
     font-weight: 800;
     margin-bottom: 3vh;
-    z-index: 2;
 }
 .subtext{
     padding: 1vh 0;
@@ -265,7 +271,8 @@ span:hover{
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.37);
     font-weight: 900;
     border-radius: 15px;
-    height: 40vh;
+    min-height: 40vh;
+    height: auto;
     width: 30vw;
     margin: 15px 30px;
     transition: .3s;
@@ -288,13 +295,12 @@ span:hover{
     padding: 2vh 2vw;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
     height: 25%;
 }
 .c1>a>i{
     font-size: 1.6rem;
-    margin: 1px;
 }
 
 .end{
@@ -316,21 +322,20 @@ span:hover{
     justify-self: center;
 }
 .c2{
-    font-size: x-large;
+    font-size: 1.5rem;
 }
 .c3{
     color: var(--tertiary);
     font-weight: 200;
-    font-size: medium;
-    padding: 1vh;
+    font-size: 1rem;
     margin-top: 2vh;
-    width: 75%;
+    width: 85%;
     text-align: left;
 }
 
 .tech-stack{
     width: 85%;
-    padding: 3px;
+    margin-top: .4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -421,32 +426,8 @@ button{
 
 
 @media (max-width: 820px) {
-    @keyframes slideFromDown {
-        from{
-            transform: translateY(30%);
-        }
-    
-        to{
-            transform: translateY(-40%);
-        }
-    }
-    @keyframes slideFromRight {
-        from{
-            transform: translateX(-15%);
-        }
-    
-        to{
-            transform: translateX(15%);
-        }
-    }
-    @keyframes slideFromLeft {
-        from{
-            transform: translateX(15%);
-        }
-    
-        to{
-            transform: translateX(-15%);
-        }
+    #ham{
+        display: inline;
     }
     a{
         margin: 0;
@@ -462,11 +443,14 @@ button{
         max-width: 90%;
     }
     .navbar{
-        position: static;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        min-height: 30vh;
+        justify-content: flex-start;
+        min-height: 9vh;
         height: auto;
+    }
+    nav{
+        display: none;
     }
     nav>ul>li{
         display: block;
@@ -479,6 +463,7 @@ button{
         margin: 10px auto;
     }
     #home{
+        padding-top: 8vh;
         flex-direction: column;
         min-height: 70vh;
         height: auto;

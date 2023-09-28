@@ -1,6 +1,7 @@
 let toggle = document.getElementById('toggle');
 let r = document.querySelector(':root');
 let dark = true;
+let expand = false;
 
 toggle.onclick = function() {
     toggle.removeChild(toggle.firstElementChild);
@@ -19,4 +20,29 @@ toggle.onclick = function() {
     }
     toggle.appendChild(newToggle);
     dark = !dark;
+}
+
+let ham = document.getElementById('ham');
+let nav = document.getElementsByTagName('nav')[0];
+
+ham.onclick = function() {
+    ham.removeChild(ham.firstElementChild);
+    const newHam = document.createElement('i');
+    newHam.id = 'ham';
+    if(expand===false){
+        newHam.classList.add('fa-solid', 'fa-x');
+        nav.style.display = 'flex';
+    }else{
+        newHam.classList.add('fa-solid', 'fa-bars');
+        nav.style.display = 'none';
+    }
+    ham.appendChild(newHam);
+    expand = !expand;
+    // if (nav.style.display === 'none') {
+    //     nav.style.display = 'block';
+        
+    // } else {
+    //     nav.style.display = 'none';
+    //     newHam.classList.add('fa-solid', 'fa-bars');
+    // }
 }
